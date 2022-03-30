@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # ESCAPA COMO PUEDAS
+=======
+# Escapa como puedas
+>>>>>>> 1f29d3386de8036393782d1bcfef06502625ac03
 
 [Descripción breve del proyecto a realizar (2-3 frases).]
 
