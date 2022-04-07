@@ -43,6 +43,12 @@ printf("     ¶¶   ¶¶¶           ¶¶¶¶¶¶¶¶¶           ¶¶¶   ¶¶       \n");
 printf("      ¶¶  ¶¶                                   ¶¶  ¶¶      \n");
 printf("       ¶¶¶¶                                     ¶¶¶¶       \n");
 
+printf("\n");
+
+printf("¿Comenzar partida?\n")
+printf("Si\n");
+printf("No");
+
 
 
 
