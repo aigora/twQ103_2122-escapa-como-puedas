@@ -66,7 +66,7 @@ printf("A continuacion debes elegir una de las dos opciones;\n\n");
 do {
     fflush(stdin);
     printf("Elige la opcion deseada:\n");
-    printf("A - Estomos preparados para todo.\n");
+    printf("A - Estamos preparados para todo.\n");
     printf("B - Nosotros preferimos irnos.\n");
     fflush (stdin);
     scanf("%c", &opcion);
