@@ -6,8 +6,14 @@
 typedef struct {
 char nombre_integrantes [20];
 char capitan[20];
+<<<<<<< Updated upstream
 char correo[50];
 } equipo;
+=======
+char correo[50]; 
+};
+
+>>>>>>> Stashed changes
 
 struct grupo{
 char nombre[20];
