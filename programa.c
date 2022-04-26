@@ -54,7 +54,8 @@ return;
 int main () {
 	
 	int i=0,j=0,m=0;
-	int respuesta1;
+	int respuesta1,respuesta2;
+	int solucion2=4;
 	char opcion;
 	int edad,numero;
 	setlocale (LC_CTYPE,"spanish"); 
@@ -156,12 +157,36 @@ do {
                         break;
                  		case 4 : printf("Opción 4--ERROR\n");
                     	break;
-                 		default : printf("Opción desconocida\n");
+                 		default : printf("Opción desconocida\n"); 
+                 		break;
        					}
        		
  						}while(respuesta1!=3);  
 						printf("RESPUESTA COORECTA\n");
-                	break;
+						
+						system("cls");
+	 
+	 					printf("\n\n\nSEGUNDA PREGUNTA\n");
+	 
+	 
+	 					printf("Varios policías vigilan un cuartel de delincuentes en el que quieren infiltrarse pero para el que necesitan una contraseña.\n");
+						 printf("Una persona llama a la puerta del local y una voz dice desde el interior 8, a lo que esa persona contesta 4. Llega otro y le dicen 14, a lo que contesta 7.\n");
+	 					printf("Uno de los policías llega a la puerta del local, La voz del interior le dice 0, a lo que el responde 0\n");
+	 					printf("Sin embargo, en lugar de dejarle pasar le disparan.\n");
+	 					printf("Averigue cual es la contraseña\n");
+
+
+	 					do {
+	 						printf("Introduzca la respuesta a 0:\n");
+	 						fflush(stdin);
+	 						scanf("%d", &respuesta2);
+	 	
+	 						}while(respuesta2!=solucion2);
+	 
+						 printf("RESPUESTA CORRECTA. La contraseña no consistía en dividir el número entre dos, sino en decir el número de letras que tenía cada número que les decían.");
+                			break;
+                			
+                			return 0;
                 	
             case 'C':		
                 	printf("Se procedera a salir del juego.\n");
