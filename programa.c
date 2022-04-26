@@ -184,9 +184,12 @@ do {
 	 						}while(respuesta2!=solucion2);
 	 
 						 printf("RESPUESTA CORRECTA. La contraseña no consistía en dividir el número entre dos, sino en decir el número de letras que tenía cada número que les decían.");
-                			break;
                 			
-                			return 0;
+							return 0;
+							
+							break;
+                			
+                			
                 	
             case 'C':		
                 	printf("Se procedera a salir del juego.\n");
