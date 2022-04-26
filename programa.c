@@ -14,17 +14,7 @@ char nombre[20];
 equipo introduccion[2];
 };
 
-
-int main () {
-	
-	int i=0,j=0,m=0;
-	char opcion;
-	int edad,numero;
-	struct grupo grupos[2];
-
-
-
-
+void banner () {
 printf("                   ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶                     \n");
 printf("                 ¶¶¶¶¶¶             ¶¶¶¶¶¶¶                \n");
 printf("              ¶¶¶¶                       ¶¶¶¶              \n");
@@ -58,6 +48,22 @@ printf("    ¶¶¶     ¶¶¶¶¶     ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶     ¶¶¶¶¶     ¶¶¶    \n");
 printf("     ¶¶   ¶¶¶           ¶¶¶¶¶¶¶¶¶           ¶¶¶   ¶¶       \n");
 printf("      ¶¶  ¶¶                                   ¶¶  ¶¶      \n");
 printf("       ¶¶¶¶                                     ¶¶¶¶       \n");
+printf("\n");
+
+return; 
+}
+
+int main () {
+	
+	int i=0,j=0,m=0;
+	char opcion;
+	int edad,numero;
+	struct grupo grupos[2];
+
+
+
+
+
 
 
 printf("Bienvenidos a ESCAPATE COMO PUEDAS\n");
