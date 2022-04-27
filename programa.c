@@ -181,7 +181,7 @@ do {
 	 						fflush(stdin);
 	 						scanf("%d", &respuesta2);
 	 	
-	 						}while(respuesta2!=solucion2);
+	 						}while(respuesta2!=4);
 	 
 						 printf("RESPUESTA CORRECTA. La contraseña no consistía en dividir el número entre dos, sino en decir el número de letras que tenía cada número que les decían.");
                 			
