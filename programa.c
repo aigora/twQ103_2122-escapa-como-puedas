@@ -3,11 +3,16 @@
 #include <string.h>
 #include <stdlib.h>
 
-struct equipo{
-char nombre_equipo[60];
+typedef struct{
 char nombre_integrantes[20];
 char capitan[20];
-char correo[50];  
+char correo[50];
+char contrasenna[10]; 
+}equipo;
+
+struct grupos{
+char nombre_equipo[20];
+equipo introduccion [20];
 };
 
 
@@ -59,7 +64,7 @@ int main () {
 	char opcion;
 	int edad,numero;
 	setlocale (LC_CTYPE,"spanish"); 
-	struct equipo jugadores[20];
+	struct grupos grupo[2];
 	
 
 
@@ -87,35 +92,40 @@ do {
         		printf("Indicanos tu edad para continuar:\n");
         		scanf("%d", &edad);
         		
-        		if (edad>16) {
-				
+        		if (edad>16) { 
+					
+					for (i=0;i<2;i++) {
 		
-						printf("\n\nIntroduce el nombre del equipo:\n");
+						printf("Introduce el nombre del equipo %d:\n",i+1);
 						fflush(stdin);
-						gets(jugadores[i].nombre_equipo);
+						gets(grupo[i].nombre_equipo);
 		
 						printf("Ahora vamos con el ultimo paso, conocer a nuestros concursantes:\n");
 		
-							printf("Indica el numero de integrantes\n");
-							scanf("%d", &numero);
-						
-						
-							for(i=0;i<numero;i++) {
-								
-								printf ("\nEscribe el nombre del integrantre %d: \n",i+1);
-								fflush(stdin);
-								gets(jugadores[i].nombre_integrantes);
-								
-							}
+						printf("Indica el numero de integrantes\n");
+						scanf("%d", &numero);
 		
+		
+						for(j=0;j<numero;j++) {
+							printf ("\nEscribe el nombre del integrantre %d: \n",j+1);
+							fflush(stdin);
+								gets(grupo[i].introduccion[j].nombre_integrantes);
+						}
 						printf ("\nEscribe el nombre de vuestro capitan: \n");
 						fflush(stdin);
-						gets(jugadores[0].capitan);
+						gets(grupo[i].introduccion[i].capitan);
+			
 		
 						printf ("Escribe un correo electronico:\n");
 						fflush(stdin);
-						gets(jugadores[0].correo);
+						gets(grupo[i].introduccion[i].correo);
 				
+						printf ("Escribe la contraseña del equipo %d\n",i+1);
+						fflush(stdin);
+						gets(grupo[i].introduccion[i].contrasenna);
+	
+					}
+
 				}else {
 			printf("Lo sentimos, debes ser mayor de 16.\n");
 				return 0;
