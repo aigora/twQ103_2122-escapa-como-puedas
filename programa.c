@@ -81,7 +81,6 @@ do {
     printf("A - Estamos preparados para todo, empecemos a conocernos.\n");
     printf("B - Empieza el juego\n");
     printf("C - Salir del juego\n");
-    printf("B - Nosotros preferimos irnos.\n");
     fflush (stdin);
     scanf("%c", &opcion);
                 
