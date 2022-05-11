@@ -65,6 +65,8 @@ int main () {
 	int edad,numero;
 	setlocale (LC_CTYPE,"spanish"); 
 	struct grupos grupo[2];
+	unsigned t0, t1,t2;
+	double time;
 	
 
 
@@ -147,6 +149,7 @@ do {
 					printf("\n\n\nPRIMERA PREGUNTA\n");
 					printf("\nBienvenidos al ordenador general. Para esta prueba contareis conun tiempo de 15seg, donde debereis marcar la opcion correcta para abrir la siguiente sala.\n");
 					
+					
 					do {
 	
 						printf("Escoja una de las siguientes opciones:\n");
@@ -173,8 +176,12 @@ do {
  						}while(respuesta1!=3);  
 						printf("RESPUESTA COORECTA\n");
 						
+						
+						
+						
 						system("cls");
-	 
+	                    
+	                       
 	 					printf("\n\n\nSEGUNDA PREGUNTA\n");
 	 
 	 
@@ -193,11 +200,13 @@ do {
 	 						}while(respuesta2!=4);
 	 
 						 printf("RESPUESTA CORRECTA. La contraseña no consistía en dividir el número entre dos, sino en decir el número de letras que tenía cada número que les decían.");
-                			
+                		 
 							return 0;
 							
 							break;
-                			
+							
+                		
+	                   	
                 			
                 	
             case 'C':		
