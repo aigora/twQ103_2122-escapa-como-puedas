@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+
 typedef struct{
 char nombre_integrantes[20];
 char capitan[20];
