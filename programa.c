@@ -61,6 +61,7 @@ int main () {
 	
 	int i=0,j=0,m=0;
 	int respuesta1,respuesta2,respuesta3, respuesta4;
+	float respuesta5, respuesta6;
 	int solucion2=4;
 	char opcion;
 	int edad,numero;
@@ -215,7 +216,7 @@ do {
 						printf("Opcion 4: Las mascarillas higienicas están fabricadas a base de materiales textiles y pero no son reutilizables.\n");
   						scanf("%d", &respuesta3);
   						
-  						switch(respuesta1)
+  						switch(respuesta3)
   						{
                  		case 1 : printf("Opción 1\n");
                         break;
@@ -229,7 +230,7 @@ do {
                  		break;
        					}
        		
- 					}while(respuesta1!=1); 
+ 					}while(respuesta3!=1); 
 					  
 					printf("RESPUESTA COORECTA\n");
                 		
@@ -244,13 +245,36 @@ do {
 						printf("¿Que numero falta?\n");
 						scanf("%d", &respuesta4);
 					
-					}while(respuesta3!=7);
+					}while(respuesta4!=7);
 					
 					printf("RESPUESTA CORRECTA\n");
 					 
-							return 0;
-							
-							break;
+					
+					
+					printf("\n\n\n TERCERA PREGUNTA EQUIPO 1");
+					
+	  				printf("Un circuito RLC formado por R=45 O, L=0.85 H y C=6 µF se conecta a una tension alterna eficaz de 220V y 50 Hz.\n");
+	  				printf("Calcula la intensidad del circuito para poder abri la puerta y continuar a la siguiente mision.\n");
+	  				printf("AYUDA: La formula necesaria se encuentra en el tema de corriente alterna.\n");
+	  				
+	  				do{
+	  					printf("Introduce la respuesta\n");
+	  					scanf("%f",&respuesta5);
+	  					
+					  }while(respuesta5!=0.82);
+					  
+					printf("\n\n\n TERCERA PREGUNTA EQUIPO 2");
+	  				printf("La separación entre dos placas metálicas cargadas es de 15 cm en el vacío.\n");
+	  				printf(" El campo eléctrico tiene una intensidad E=3000 N/C y un electrón de carga -1,6 10-19 C y de masa 9,1 10-31 Kg se suelta justamente sobre la superficie de la placa negativa.\n");
+	  				printf("¿Cuánto tiempo tardará en alcanzar la otra placa?.\n");
+	  				printf("AYUDA: La formula necesaria se encuentra en el tema de electrostatica.\n");
+	  				
+	  				do{
+	  					printf("Introduce la respuesta\n");
+	  					scanf("%f", &respuesta6);
+					  } while(respuesta6!=0.000000024);
+						break;
+						return 0;
 							
                 		
 	                   	
