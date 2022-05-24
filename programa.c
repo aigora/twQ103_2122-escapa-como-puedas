@@ -1,7 +1,10 @@
 #include <stdio.h>
+#include <iostream>
+#include <ctime> 
 #include <locale.h>
 #include <string.h>
 #include <stdlib.h>
+
 
 
 typedef struct{
@@ -67,8 +70,9 @@ int main () {
 	int edad,numero;
 	setlocale (LC_CTYPE,"spanish"); 
 	struct grupos grupo[2];
-	unsigned t0, t1,t2;
-	double time;
+	unsigned t0, t1,t2, t3, t4;
+	double time, time1, time2, time3;
+	
 	
 
 
@@ -149,6 +153,8 @@ do {
 					printf("Os dirigireis a la primera puerta a la derecha donde encontrareis vuestra primera prueba\n");
 					printf("Mucha suerte. Confiamos en vosotros\n");
 					
+					t0=clock();
+						
 					printf("\n\n\nPRIMERA PREGUNTA. EQUIPO 1\n");
 					printf("\nBienvenidos al ordenador general. Para esta prueba contareis conun tiempo de 15seg, donde debereis marcar la opcion correcta para abrir la siguiente sala.\n");
 					
@@ -178,13 +184,15 @@ do {
        		
  					}while(respuesta1!=3);  
 					printf("RESPUESTA COORECTA\n");
+					t1 = clock();
+ 
+	                time = (double(t1-t0)/CLOCKS_PER_SEC);
+	                std::cout << "tiempo de repuesta: " << time << std::endl;
 						
-						
-						
-						
+							
 					system("cls");
 	                    
-	                       
+	                t0=clock();      
 	 				printf("\n\n\nSEGUNDA PREGUNTA. EQUIPO 1\n");
 	 
 	 
@@ -203,9 +211,14 @@ do {
 	 				}while(respuesta2!=4);
 	 
 					printf("RESPUESTA CORRECTA. La contraseña no consistía en dividir el número entre dos, sino en decir el número de letras que tenía cada número que les decían.");
-						 
+					t2 = clock();
+ 
+                    time1 = (double(t2-t0)/CLOCKS_PER_SEC);
+	                std::cout << "tiempo de respuesta: " << time1 << std::endl;
+	                
 					system("cls"); 
 					
+					t0=clock();
 					printf("\n\n\nPRIMERA PREGUNTA. EQUIPO 2\n");
 					do {
 	
@@ -230,9 +243,13 @@ do {
                  		break;
        					}
        		
- 					}while(respuesta3!=1); 
-					  
+ 					} while(respuesta3!=1); 
 					printf("RESPUESTA COORECTA\n");
+					t3=clock();
+					
+					time2 = (double(t3-t0)/CLOCKS_PER_SEC);
+	                std::cout << "tiempo de respuesta: " << time2 << std::endl;
+					
                 		
 						
 					system("cls");
