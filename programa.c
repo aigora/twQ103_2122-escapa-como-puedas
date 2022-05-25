@@ -17,6 +17,37 @@ char nombre_equipo[20];
 equipo introduccion [20];
 };
 
+struct respuestas {
+	int res1;
+	int res2;
+	int res3;
+	int res4;
+	float res5;
+	float res6;
+	char res7[30];
+	char res8[30];
+};
+
+struct puntos {
+	int equipo1;
+	int equipo2;
+};
+
+int pregunta7(char respuesta7[]) {
+	
+	int orden,i;
+	char frase2[]="sulfito plumboso";
+	
+	orden=strcmp(respuesta7,frase2);
+	if(orden==0) {
+	
+	
+	} else if(orden==1) {
+	
+	}
+	
+return orden;						
+}
 
 
 void banner () {
@@ -60,16 +91,16 @@ return;
 
 int main () {
 	
-	int i=0,j=0,m=0;
+	int i=0,j=0,m=0, orden;
 	int respuesta1,respuesta2,respuesta3, respuesta4;
 	float respuesta5, respuesta6;
-	int solucion2=4;
+	char respuesta7[30], respuesta8[30];
 	char opcion;
 	int edad,numero;
 	setlocale (LC_CTYPE,"spanish"); 
 	struct grupos grupo[2];
-	unsigned t0, t1,t2, t3, t4;
-	double time, time1, time2, time3;
+	struct respuestas respuesta={3,4,1,7,0.82,0.000000024,"sulfito plumboso","Cs2MnO4"};
+	struct puntos punto={5,5};
 	
 	
 
@@ -144,20 +175,21 @@ do {
 					printf("Rápidamente, a principios de enero, las autoridades de este país identificaron la causa como una nueva cepa de coronavirus.\n");
 					printf("El objetivo, frenar cuanto antes un brote de Covid-19, una enfermedad vírica muy contagiosa y de alta letalidad provocada por el virus del mismo nombre.\n");
 					printf("Es, a día de hoy, una de las más mortíferas que se conocen para el ser humano.\n");
-					printf("El tiempo corre en vuestra contra. Necesitais realizar la misión en menos de una hora sino quieres que se produzca la extinción humana en la Tierra\n");
-					printf("\nBienvenido a lo que podria ser el fin del mundo. Bienvenido a ESCAPA COMO PUEDAS\n");
+					printf("El tiempo corre en vuestra contra. Dos equipos os enfrentareis para capturar la cura y el mejor decidira que hacer con ella\n");
+					printf("\nBienvenidos a lo que podria ser el fin del mundo. Bienvenido a ESCAPA COMO PUEDAS\n");
 					
-					printf("Os encontrais dentro del laboratorio donde se origino la cura del coronavirus.Debereis resolver los distintos escenarios h¡antes de que se acabe el tiempo\n");
+					printf("Os encontrais dentro del laboratorio donde se origino la cura del coronavirus.Debereis resolver los distintos escenarios cada uno con distintas dificultades\n");
 					printf("Os dirigireis a la primera puerta a la derecha donde encontrareis vuestra primera prueba\n");
 					printf("Mucha suerte. Confiamos en vosotros\n");
 					
-					t0=clock();
+					
 						
+					
+					printf("Bienvenidos a la sala de pruebas del laboratorio. A continuacion encontrareis un par de preguntas que debereis resolver para conseguir una mayor puntuacion\n");
+					
 					printf("\n\n\nPRIMERA PREGUNTA. EQUIPO 1\n");
-					printf("\nBienvenidos al ordenador general. Para esta prueba contareis conun tiempo de 15seg, donde debereis marcar la opcion correcta para abrir la siguiente sala.\n");
 					
 					
-					do {
 	
 						printf("Escoja una de las siguientes opciones:\n");
   						printf("Opción 1: congestión nasal, rinorrea (aumento de mucosidad nasal), estornudos. lagrimeo y enrojecimiento de los ojos, tos seca.\n");
@@ -169,28 +201,27 @@ do {
   						switch(respuesta1)
   						{
                  		case 1 : printf("Opción 1--ERROR\n");
+                 		punto.equipo1--;
                         break;
                  		case 2 : printf("Opción 2--ERROR\n");
+                 		punto.equipo1--;
                         break;
-                 		case 3 : printf("Opción 3\n");
+                 		case 3 : printf("Opción 3. RESPUESTA CORRECTA\n");
+                 		punto.equipo1=punto.equipo1+5;
                         break;
                  		case 4 : printf("Opción 4--ERROR\n");
+                 		punto.equipo1--;
                     	break;
                  		default : printf("Opción desconocida\n"); 
+                 		punto.equipo1--;
                  		break;
        					}
        		
- 					}while(respuesta1!=3);  
-					printf("RESPUESTA COORECTA\n");
-					t1 = clock();
- 
-	                time = (double(t1-t0)/CLOCKS_PER_SEC);
-	                std::cout << "tiempo de repuesta: " << time << std::endl;
 						
 							
 					system("cls");
 	                    
-	                t0=clock();      
+	                    
 	 				printf("\n\n\nSEGUNDA PREGUNTA. EQUIPO 1\n");
 	 
 	 
@@ -201,68 +232,91 @@ do {
 	 				printf("Averigue cual es la contraseña\n");
 
 
-	 				do {
+	 				for(i=0;i<5;i++) { 
+	 				
 	 					printf("Introduzca la respuesta a 0:\n");
-	 					fflush(stdin);
+	 					
 	 					scanf("%d", &respuesta2);
-	 	
-	 				}while(respuesta2!=4);
+	 					
+	 					if(respuesta2!=respuesta.res2) {
+	 						punto.equipo1--;
+						 } else if(respuesta2==respuesta.res2) {
+						 	punto.equipo1=punto.equipo1+5;
+						 	break;
+						 }
+	 				}
 	 
 					printf("RESPUESTA CORRECTA. La contraseña no consistía en dividir el número entre dos, sino en decir el número de letras que tenía cada número que les decían.");
-					t2 = clock();
- 
-                    time1 = (double(t2-t0)/CLOCKS_PER_SEC);
-	                std::cout << "tiempo de respuesta: " << time1 << std::endl;
+					
 	                
 					system("cls"); 
 					
-					t0=clock();
+					
 					printf("\n\n\nPRIMERA PREGUNTA. EQUIPO 2\n");
-					do {
+					
+					
 	
-						printf("Escoja la opcion adecuada sobre el uso del tipo de mascarilla:\n");
-  						printf("Opción 1: Las mascarillas higienicas no son un producto sanitario. Funcionan como un complemento de protección y seguridad.\n");
-						printf("Opcion 2: Las mascarillas quirúrgicas, evitan que cualquier persona pueda alcanzar agentes infecciosos.\n");
-						printf("Opcion 3: Las mascarillas EPI filtran el aire exalado para evitar la salida de organismos como virus.\n");
-						printf("Opcion 4: Las mascarillas higienicas están fabricadas a base de materiales textiles y pero no son reutilizables.\n");
-  						scanf("%d", &respuesta3);
+					printf("Escoja la opcion adecuada sobre el uso del tipo de mascarilla:\n");
+  					printf("Opción 1: Las mascarillas higienicas no son un producto sanitario. Funcionan como un complemento de protección y seguridad.\n");
+					printf("Opcion 2: Las mascarillas quirúrgicas, evitan que cualquier persona pueda alcanzar agentes infecciosos.\n");
+					printf("Opcion 3: Las mascarillas EPI filtran el aire exalado para evitar la salida de organismos como virus.\n");
+					printf("Opcion 4: Las mascarillas higienicas están fabricadas a base de materiales textiles y pero no son reutilizables.\n");
+  					scanf("%d", &respuesta3);
   						
-  						switch(respuesta3)
+  					switch(respuesta3)
   						{
-                 		case 1 : printf("Opción 1\n");
+                 		case 1 : printf("Opción 1. RESPUESTA COORECTA\n");
+                 		punto.equipo2=punto.equipo2+5;
                         break;
                  		case 2 : printf("Opción 2--ERROR\n");
+                 		punto.equipo2--;
                         break;
                  		case 3 : printf("Opción 3--ERROR\n");
+                 		punto.equipo2--;
                         break;
                  		case 4 : printf("Opción 4--ERROR\n");
+                 		punto.equipo2--;
                     	break;
                  		default : printf("Opción desconocida\n"); 
+                 		punto.equipo2--;
                  		break;
        					}
        		
- 					} while(respuesta3!=1); 
-					printf("RESPUESTA COORECTA\n");
-					t3=clock();
-					
-					time2 = (double(t3-t0)/CLOCKS_PER_SEC);
-	                std::cout << "tiempo de respuesta: " << time2 << std::endl;
-					
-                		
-						
+
 					system("cls");
 						
 					printf("\n\n\nSEGUNDA PREGUNTA. EQUIPO 2\n");
 					
 					printf("Debeis completar la serie numerica para poder continuar\n");
 					printf(" 5 6 9 6 7 6 ¿?\n");
-					do{
-						printf("¿Que numero falta?\n");
-						scanf("%d", &respuesta4);
 					
-					}while(respuesta4!=7);
+					for(i=0;i<5;i++) {
+							printf("¿Que numero falta?\n");
+					scanf("%d", &respuesta4);
 					
-					printf("RESPUESTA CORRECTA\n");
+					if(respuesta4!=respuesta.res4) {
+	 						punto.equipo2--;
+					} else if(respuesta4==respuesta.res4) {
+							printf("RESPUESTA CORRECTA\n");
+						 	punto.equipo2=punto.equipo2+5;
+						 	break;
+					}
+					
+					}
+					
+					
+					
+					printf("MUY BIEN EQUIPOS HABEIS CONSEGUIDO PASAR A LA SIGUIENTE RONDA\n");
+					printf("Primero hagamos un recuento de los puntos que llevais cada uno\n");
+					printf("El equipo %s lleva %d puntos, mientras que el equipo %s lleva %d puntos\n", grupo[0].nombre_equipo,punto.equipo1, grupo[1].nombre_equipo, punto.equipo2);
+					
+					printf("\n\nPerfecto. Ahora pasaremos a las siguientes cuestiones con una dificultad media\n");
+					printf("Que os vata bien. ¡Y que la suerte esté siempre de vuestra parte!\n");
+					
+					printf("\n\nEquipo %s os estais adentrando en la sala de control de mando, tendreis que conseguir arreglar el ordenador principal, para ver donde se encuentra la cura\n", grupo[0].nombre_equipo);
+					printf("Tened en cuenta que ahora contareis con muchas menos oportuidades que antes\n");
+					printf("Sed inteligentes y no desperdicies estos puntos que luego os haran falta\n");
+					printf("Nos vemos a la salida\n");
 					 
 					
 					
@@ -272,22 +326,76 @@ do {
 	  				printf("Calcula la intensidad del circuito para poder abri la puerta y continuar a la siguiente mision.\n");
 	  				printf("AYUDA: La formula necesaria se encuentra en el tema de corriente alterna.\n");
 	  				
-	  				do{
+	  				for(i=0;i<2;i++) {
+					  
 	  					printf("Introduce la respuesta\n");
 	  					scanf("%f",&respuesta5);
 	  					
-					  }while(respuesta5!=0.82);
+	  					if(respuesta5!=respuesta.res5) {
+	  						
+	  						punto.equipo1=punto.equipo1-5;
+						  } else if(respuesta5==respuesta.res5) {
+						  	punto.equipo1=punto.equipo1+8;
+						  	printf("Correcto\n");
+						  }
+					  }
 					  
+					  
+					printf("\n\nEquipo %s. Vosotros os encontrais actualmente en la sala de alta corriente\n");
+					printf("Debereis poner la solucion correcta para iluminar el sendero que os llevara a la siguiente prueba\n");
+					printf("Mucha suerte\n");
+					
+					
 					printf("\n\n\n TERCERA PREGUNTA EQUIPO 2");
 	  				printf("La separación entre dos placas metálicas cargadas es de 15 cm en el vacío.\n");
 	  				printf(" El campo eléctrico tiene una intensidad E=3000 N/C y un electrón de carga -1,6 10-19 C y de masa 9,1 10-31 Kg se suelta justamente sobre la superficie de la placa negativa.\n");
 	  				printf("¿Cuánto tiempo tardará en alcanzar la otra placa?.\n");
 	  				printf("AYUDA: La formula necesaria se encuentra en el tema de electrostatica.\n");
 	  				
-	  				do{
+	  				for(i=0;i<2;i++) {
+	  					
+					
 	  					printf("Introduce la respuesta\n");
 	  					scanf("%f", &respuesta6);
-					  } while(respuesta6!=0.000000024);
+	  					
+	  					if(respuesta6!=respuesta.res6) {
+	  						punto.equipo2=punto.equipo2-5;
+						} else if(respuesta6==respuesta.res6) {
+						  	punto.equipo2=punto.equipo1+8;
+						  	break;
+						  }
+	  					
+	  					}
+	  					
+	  					
+	  				printf("Perfecto. Espero que hayais conseguido muchos puntos en estas ultimas preguntas\n");
+					printf("A continuacion os haremos las ultimas antes del duelo final.\n");
+					
+					printf("Equipo %s es tu turno\n", grupo[0].nombre_equipo);
+					
+					printf("Debereis escribir la nomenclatura tradicional de este compuesto PbSO3 que ha sido utilizado para la cura\n");
+	
+					for(i=0;i<2;i++) {
+						
+						printf("Introduce compuesto\n");
+						fflush (stdin);
+						gets(respuesta7);
+						
+						orden=pregunta7(respuesta7);
+						
+						if(pregunta7(respuesta7)==0) {
+							printf("Correcto\n");
+							punto.equipo1=punto.equipo1+8;
+							break;
+							
+						}else if(pregunta7(respuesta7)!=0) {
+							punto.equipo1=punto.equipo1-5;
+							printf("Incorrecta\n");
+						}
+		
+					}
+					
+					
 						break;
 						return 0;
 							
