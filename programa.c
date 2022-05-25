@@ -49,6 +49,22 @@ int pregunta7(char respuesta7[]) {
 return orden;						
 }
 
+int pregunta8(char respuesta8[]) {
+	
+	int orden1,i;
+	char frase2[]="manganato de cesio";
+	
+	orden1=strcmp(respuesta8,frase2);
+	if(orden1==0) {
+	
+	
+	} else if(orden1==1) {
+	
+	}
+	
+return orden1;						
+}
+
 
 void banner () {
 printf("                   ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶                     \n");
@@ -91,15 +107,17 @@ return;
 
 int main () {
 	
-	int i=0,j=0,m=0, orden;
+	int i=0,j=0,m=0,orden, orden1;
 	int respuesta1,respuesta2,respuesta3, respuesta4;
 	float respuesta5, respuesta6;
 	char respuesta7[30], respuesta8[30];
 	char opcion;
+	FILE *pf;
+	char cad[1500];
 	int edad,numero;
 	setlocale (LC_CTYPE,"spanish"); 
 	struct grupos grupo[2];
-	struct respuestas respuesta={3,4,1,7,0.82,0.000000024,"sulfito plumboso","Cs2MnO4"};
+	struct respuestas respuesta={3,4,1,7,0.82,0.000000024,"sulfito plumboso","manganato de cesio"};
 	struct puntos punto={5,5};
 	
 	
@@ -117,7 +135,8 @@ do {
     printf("Elige la opcion deseada:\n");
     printf("A - Estamos preparados para todo, empecemos a conocernos.\n");
     printf("B - Empieza el juego\n");
-    printf("C - Salir del juego\n");
+    printf("C - Instrucciones del juego\n");
+    printf("D - Salir del juego\n");
     fflush (stdin);
     scanf("%c", &opcion);
                 
@@ -333,7 +352,7 @@ do {
 	  					
 	  					if(respuesta5!=respuesta.res5) {
 	  						
-	  						punto.equipo1=punto.equipo1-5;
+	  						punto.equipo1=punto.equipo1-3;
 						  } else if(respuesta5==respuesta.res5) {
 						  	punto.equipo1=punto.equipo1+8;
 						  	printf("Correcto\n");
@@ -359,7 +378,7 @@ do {
 	  					scanf("%f", &respuesta6);
 	  					
 	  					if(respuesta6!=respuesta.res6) {
-	  						punto.equipo2=punto.equipo2-5;
+	  						punto.equipo2=punto.equipo2-3;
 						} else if(respuesta6==respuesta.res6) {
 						  	punto.equipo2=punto.equipo1+8;
 						  	break;
@@ -389,13 +408,37 @@ do {
 							break;
 							
 						}else if(pregunta7(respuesta7)!=0) {
-							punto.equipo1=punto.equipo1-5;
+							punto.equipo1=punto.equipo1-3;
 							printf("Incorrecta\n");
 						}
 		
 					}
 					
+					printf("Equipo %s, es vuestro turno de ser capaces de elegir uno de los componentes que faltan en la vacuna\n", grupo[1].nombre_equipo);
+					printf("A continuacion de entre todos los botes del laboratorio debereis seleccionar el bote adecuado\n");
+					printf("Mucha suerte\n");
 					
+					printf("Debereis escribir la nomenclatura de stock de este compuesto Cs2MnO4\n");
+					
+					for(i=0;i<2;i++) {
+						
+						printf("Introduce la nomenclatura stock de dicho compuesto\n");
+						fflush (stdin);
+						gets(respuesta8);
+						
+						orden1=pregunta8(respuesta8);
+						
+						if(pregunta8(respuesta8)==0) {
+							printf("Correcto\n");
+							punto.equipo2=punto.equipo2+8;
+							break;
+							
+						}else if(pregunta8(respuesta8)!=0) {
+							punto.equipo2=punto.equipo2-3;
+							printf("Incorrecta\n");
+						}
+		
+					}
 						break;
 						return 0;
 							
@@ -403,15 +446,28 @@ do {
 	                   	
                 			
                 	
-            case 'C':		
-                	printf("Se procedera a salir del juego.\n");
-                		return 0;
+            case 'C':
+					
+					if (!(pf=fopen("instrucciones.txt","rb"))) /* controlamos si se produce un error */
+					{
+						printf("Error al abrir el fichero");
+					}else
+					{
+					fgets(cad,1500,pf);
+					printf("%s",cad);
+					}		
+                	fclose(pf);
                 	break;
+                	
+            case 'D':
+            	printf("Se procedera a salir del juego.\n");
+                return 0;
+                break;
             	
             }    	
                 	 
 	} 
- while (opcion!='C'); {
+ while (opcion!='A'||'B'||'C'||'D'); {
 	printf("\n\nERROR 80028F10. No se ha podido cargar el juego");
 	system("cls");
 	}
