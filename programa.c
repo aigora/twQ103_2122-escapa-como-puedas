@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <iostream>
-#include <ctime> 
 #include <locale.h>
 #include <string.h>
 #include <stdlib.h>
