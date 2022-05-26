@@ -5,6 +5,7 @@
 
 
 
+
 typedef struct{
 char nombre_integrantes[20];
 char capitan[20];
@@ -330,7 +331,7 @@ do {
 					printf("El equipo %s lleva %d puntos, mientras que el equipo %s lleva %d puntos\n", grupo[0].nombre_equipo,punto.equipo1, grupo[1].nombre_equipo, punto.equipo2);
 					
 					printf("\n\nPerfecto. Ahora pasaremos a las siguientes cuestiones con una dificultad media\n");
-					printf("Que os vata bien. ¡Y que la suerte esté siempre de vuestra parte!\n");
+					printf("Que os vaya bien. ¡Y que la suerte esté siempre de vuestra parte!\n");
 					
 					printf("\n\nEquipo %s os estais adentrando en la sala de control de mando, tendreis que conseguir arreglar el ordenador principal, para ver donde se encuentra la cura\n", grupo[0].nombre_equipo);
 					printf("Tened en cuenta que ahora contareis con muchas menos oportuidades que antes\n");
