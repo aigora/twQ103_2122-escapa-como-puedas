@@ -150,21 +150,7 @@ int pregunta13(char respuesta13[]) {
 return orden6;						
 }
 
-int pregunta14(char respuesta14[]) {
-	
-	int orden7,i;
-	char frase2[]="Platón";
-	
-	orden7=strcmp(respuesta14,frase2);
-	if(orden7==0) {
-	
-	
-	} else if(orden7==1) {
-	
-	}
-	
-return orden7;						
-}
+
 
 void banner () {
 printf("                   ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶                     \n");
@@ -208,11 +194,11 @@ return;
 
 int main () {
 	
-	int i=0,j=0,m=0,orden, orden1,orden2, orden3, orden4, orden5, orden6, orden7, covid=2019, suma=0, decision;
+	int i=0,j=0,m=0,orden, orden1,orden2, orden3, orden4, orden5, orden6,  covid=2019, suma=0, decision;
 	int respuesta1,respuesta2,respuesta3, respuesta4;
 	int comodin, comodin1;
 	float respuesta5, respuesta6;
-	char respuesta7[30], respuesta8[30],respuesta9[50], respuesta10[50], respuesta11[50], respuesta12[50], respuesta13[50],respuesta14[50];
+	char respuesta7[30], respuesta8[30],respuesta9[50], respuesta10[50], respuesta11[50], respuesta12[50], respuesta13[50];
 	char cancion[50],cancion2[50];
 	char opcion;
 	char jug1,jug2;
@@ -222,7 +208,7 @@ int main () {
 	int edad,numero;
 	setlocale (LC_CTYPE,"spanish"); 
 	struct grupos grupo[2];
-	struct respuestas respuesta={3,4,1,7,0.82,0.000000024,"sulfito plumboso","manganato de cesio","resistire para seguir viviendo","quedate en tu casa","Nueva Zelanda","Amazonas","Inglaterra",};
+	struct respuestas respuesta={3,4,1,7,0.82,0.000000024,"sulfito plumboso","manganato de cesio","resistire para seguir viviendo","quedate en tu casa","Nueva Zelanda","Amazonas","Inglaterra"};
 	struct puntos punto={5,5};
 	
 	
@@ -555,6 +541,7 @@ do {
 							printf("Incorrecta\n");
 						}
 					}
+					break;
 							
 					printf("Segunda y ultima oportunidad\n");
 					for(i=0;i<1;i++) {
@@ -618,22 +605,8 @@ do {
 							
 					printf("Segunda y ultima oportunidad\n");
 					for(i=0;i<1;i++) {
-						printf("¿Qué filósofo creó El mito de la caverna?\n");
-						fflush (stdin);
-						gets(respuesta14);
-						
-						orden7=pregunta14(respuesta14);
-						
-						if(pregunta14(respuesta14)==0) {
-							printf("Correcto\n");
-							punto.equipo2=punto.equipo2+3;
-							break;
-							
-						}else if(pregunta14(respuesta14)!=0) {
-							punto.equipo2=punto.equipo2-3;
-							printf("Incorrecta\n");
-						}
-						}
+                     //pregunta
+                    }
 						break;
 						
 					case '2':
