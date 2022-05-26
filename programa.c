@@ -520,7 +520,7 @@ do {
 					fflush(stdin);
 					scanf("%d", &comodin);
 					switch(comodin) {
-					case '1':
+					case 1:
 					printf("Perfecto a continuacion os realizaremos unas preguntas sencillas\n");
 					printf("Primera pregunta\n");
 					for(i=0;i<1;i++) {
@@ -541,7 +541,7 @@ do {
 							printf("Incorrecta\n");
 						}
 					}
-					break;
+					
 							
 					printf("Segunda y ultima oportunidad\n");
 					for(i=0;i<1;i++) {
@@ -581,7 +581,7 @@ do {
 					fflush(stdin);
 					scanf("%d", &comodin1);
 					switch(comodin1) {
-					case '1':
+					case 1:
 					printf("Perfecto a continuacion os realizaremos unas preguntas sencillas\n");
 					printf("Primera pregunta\n");
 					for(i=0;i<1;i++) {
@@ -609,7 +609,7 @@ do {
                     }
 						break;
 						
-					case '2':
+					case 2:
 						printf("No habeis cogido el comodin\n");
 						break;
 						
@@ -760,16 +760,18 @@ do {
 					}
 					
 					printf("Vencedores. Debereis elegir ahora vuestro final. Ha sido un placer contar con vosotros y confiamos en que hareis lo correcto\n");
-					printf("Introducid vuestra decision\n");
+					printf("Introducid vuestra decision:\n");
+					printf("1-Salvar el mundo\n");
+					printf("2-No salavarlo\n");
 					scanf("%d", &decision);
 					
 					switch(decision) {
-						case '1':
+						case 1:
 							printf("Estamos muy orgullosos de vosotros. Salid y arreglad el mundo\n");
 							printf("Equipo perdedor. Lo sentimos por vosotros pero hasta aqui ha llegado vuestra mision.\n");
 							printf("Ha sido un placer conoceros pero conoceis las normas y para que unos salgan otros deben quedarse\n");
 							break;
-						case '2':
+						case 2:
 							printf("No estamos conformes con vuestra decision pero para ello habeis luchado tanto, esperamos que recapaciteis a tiempo\n");
 							printf("Esto causara la extincion humana\n");
 							printf("Equipo perdedor. Lo sentimos por vosotros pero hasta aqui ha llegado vuestra mision.\n");
@@ -803,7 +805,7 @@ do {
                 break;
             	
             }    	
-                	 
+              	 
 	} 
  while (opcion!='A'||'B'||'C'||'D'); {
 	printf("\n\nERROR 80028F10. No se ha podido cargar el juego");
