@@ -30,7 +30,7 @@ struct respuestas {
 	char res10[50];
 	char res11[50];
 	char res12[50];
-	char res13[50];
+	
 };
 
 struct puntos {
@@ -118,10 +118,12 @@ int pregunta11(char respuesta11[]) {
 return orden4;						
 }
 
+
+
 int pregunta12(char respuesta12[]) {
 	
 	int orden5,i;
-	char frase2[]="Amazonas";
+	char frase2[]="Inglaterra";
 	
 	orden5=strcmp(respuesta12,frase2);
 	if(orden5==0) {
@@ -132,22 +134,6 @@ int pregunta12(char respuesta12[]) {
 	}
 	
 return orden5;						
-}
-
-int pregunta13(char respuesta13[]) {
-	
-	int orden6,i;
-	char frase2[]="Inglaterra";
-	
-	orden6=strcmp(respuesta13,frase2);
-	if(orden6==0) {
-	
-	
-	} else if(orden6==1) {
-	
-	}
-	
-return orden6;						
 }
 
 
@@ -194,11 +180,11 @@ return;
 
 int main () {
 	
-	int i=0,j=0,m=0,orden, orden1,orden2, orden3, orden4, orden5, orden6,  covid=2019, suma=0, decision;
+	int i=0,j=0,m=0,orden, orden1,orden2, orden3, orden4, orden5,covid=2019, suma=0, decision;
 	int respuesta1,respuesta2,respuesta3, respuesta4;
 	int comodin, comodin1;
 	float respuesta5, respuesta6;
-	char respuesta7[30], respuesta8[30],respuesta9[50], respuesta10[50], respuesta11[50], respuesta12[50], respuesta13[50];
+	char respuesta7[30], respuesta8[30],respuesta9[50], respuesta10[50], respuesta11[50], respuesta12[50];
 	char cancion[50],cancion2[50];
 	char opcion;
 	char jug1,jug2;
@@ -208,7 +194,7 @@ int main () {
 	int edad,numero;
 	setlocale (LC_CTYPE,"spanish"); 
 	struct grupos grupo[2];
-	struct respuestas respuesta={3,4,1,7,0.82,0.000000024,"sulfito plumboso","manganato de cesio","resistire para seguir viviendo","quedate en tu casa","Nueva Zelanda","Amazonas","Inglaterra"};
+	struct respuestas respuesta={3,4,1,7,0.82,0.000000024,"sulfito plumboso","manganato de cesio","resistire para seguir viviendo","quedate en tu casa","Nueva Zelanda","Inglaterra"};
 	struct puntos punto={5,5};
 	
 	
@@ -420,13 +406,13 @@ do {
 	  					scanf("%f",&respuesta5);
 	  					
 	  					if(respuesta5!=respuesta.res5) {
-	  						
 	  						punto.equipo1=punto.equipo1-3;
-						  } else if(respuesta5==respuesta.res5) {
+						}else if(respuesta5==respuesta.res5) {
 						  	punto.equipo1=punto.equipo1+8;
 						  	printf("Correcto\n");
-						  }
-					  }
+						  	break;
+						}
+					}
 					  
 					system("cls");
 					
@@ -446,12 +432,13 @@ do {
 	  					
 	  					if(respuesta6!=respuesta.res6) {
 	  						punto.equipo2=punto.equipo2-3;
-						} else if(respuesta6==respuesta.res6) {
+						}else if(respuesta6==respuesta.res6) {
+							printf("Correcto\n");
 						  	punto.equipo2=punto.equipo1+8;
 						  	break;
-						  }
+						}
 	  					
-	  					}
+	  				}
 	  					
 	  				system("cls");
 					  
@@ -482,7 +469,11 @@ do {
 						}
 		
 					}
+					
+					
 					system("cls");
+					
+					
 					printf("Equipo %s, es vuestro turno de ser capaces de elegir uno de los componentes que faltan en la vacuna\n", grupo[1].nombre_equipo);
 					printf("A continuacion de entre todos los botes del laboratorio debereis seleccionar el bote adecuado\n");
 					printf("Mucha suerte\n");
@@ -521,49 +512,34 @@ do {
 					scanf("%d", &comodin);
 					switch(comodin) {
 					case 1:
-					printf("Perfecto a continuacion os realizaremos unas preguntas sencillas\n");
-					printf("Primera pregunta\n");
-					for(i=0;i<1;i++) {
-							
-                        printf("¿Cuál fue el primer país en aprobar el sufragio femenino?\n");
-						fflush (stdin);
-						gets(respuesta11);
+						printf("Perfecto a continuacion os realizaremos unas preguntas sencillas de cultura general\n");
+						printf("Primera pregunta\n");
 						
-						orden4=pregunta11(respuesta11);
 						
-						if(pregunta11(respuesta11)==0) {
-							printf("Correcto\n");
-							punto.equipo1=punto.equipo1+3;
-							break;
+						for(i=0;i<1;i++) {
 							
-						}else if(pregunta11(respuesta11)!=0) {
+                       		printf("¿Cuál fue el primer país en aprobar el sufragio femenino?\n");
+							fflush (stdin);
+							gets(respuesta11);
+						
+							orden4=pregunta11(respuesta11);
+						
+							if(pregunta11(respuesta11)==0) {
+								printf("Correcto\n");
+								punto.equipo1=punto.equipo1+3;
+								break;
+							
+							}else if(pregunta11(respuesta11)!=0) {
 							punto.equipo1=punto.equipo1-3;
 							printf("Incorrecta\n");
+							break;
+							}
 						}
-					}
 					
-							
-					printf("Segunda y ultima oportunidad\n");
-					for(i=0;i<1;i++) {
-						
-						printf("¿Cuál es el río más caudaloso del mundo?\n");
-						fflush (stdin);
-						gets(respuesta12);
-						
-						orden5=pregunta12(respuesta12);
-						
-						if(pregunta12(respuesta12)==0) {
-							printf("Correcto\n");
-							punto.equipo1=punto.equipo1+3;
-							break;
-							
-						}else if(pregunta12(respuesta12)!=0) {
-							punto.equipo1=punto.equipo1-3;
-							printf("Incorrecta\n");
-						}
-					}
+	
 						break;
-					case '2':
+						
+					case 2:
 						printf("No habeis cogido el comodin\n");
 						break;
 						
@@ -580,37 +556,38 @@ do {
 					printf("Pulsad 1 si quereis utlizar el comodin.        Pulsad 2 si no quereis utilizarlo\n");
 					fflush(stdin);
 					scanf("%d", &comodin1);
+					
+					
 					switch(comodin1) {
-					case 1:
-					printf("Perfecto a continuacion os realizaremos unas preguntas sencillas\n");
-					printf("Primera pregunta\n");
-					for(i=0;i<1;i++) {
-							
-                        printf("¿Dónde se inventó el Ping-Pong?\n");
-						fflush (stdin);
-						gets(respuesta13);
 						
-						orden6=pregunta13(respuesta13);
+						case 1:
+							
+							printf("Perfecto a continuacion os realizaremos unas preguntas sencillas\n");
+							printf("Primera pregunta\n");
+							
+							for(i=0;i<1;i++) {
+							
+                        		printf("¿Dónde se inventó el Ping-Pong?\n");
+								fflush (stdin);
+								gets(respuesta12);
 						
-						if(pregunta13(respuesta13)==0) {
-							printf("Correcto\n");
-							punto.equipo2=punto.equipo2+3;
-							break;
+								orden5=pregunta12(respuesta12);
+						
+								if(pregunta12(respuesta12)==0) {
+									printf("Correcto\n");
+									punto.equipo2=punto.equipo2+3;
+									break;
 							
-						}else if(pregunta13(respuesta13)!=0) {
-							punto.equipo2=punto.equipo2-3;
-							printf("Incorrecta\n");
-						}
-					}
-							
-					printf("Segunda y ultima oportunidad\n");
-					for(i=0;i<1;i++) {
-                     //pregunta
-                    }
+								}else if(pregunta12(respuesta12)!=0) {
+									punto.equipo2=punto.equipo2-3;
+									printf("Incorrecta\n");
+								}
+							}
 						break;
 						
 					case 2:
 						printf("No habeis cogido el comodin\n");
+						
 						break;
 						
 					}
@@ -673,13 +650,6 @@ do {
 					printf("A continuacion debereis averiguar el texto encriptado\n\n\n");
 					printf("Pista: El año donde comenzo el covid es 2019, que sumado es 12\n");
 					
-					suma=0;
-					for(i=0;i<4;i++) {
-		
-						suma+=covid%10;
-		
-						covid/=10;
-					}
 					
 					i=0;
 					while(respuesta.res10[i]!='\0') {
