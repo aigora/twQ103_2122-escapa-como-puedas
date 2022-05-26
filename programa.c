@@ -29,6 +29,9 @@ struct respuestas {
 	char res8[30];
 	char res9[50];
 	char res10[50];
+	char res11[50];
+	char res12[50];
+	char res13[50];
 };
 
 struct puntos {
@@ -187,9 +190,10 @@ printf("\n");
 return; 
 }
 
+
 int main () {
 	
-	int i=0,j=0,m=0,orden, orden1,orden2, orden3, covid=2019, suma=0, decision;
+	int i=0,j=0,m=0,orden, orden1,orden2, orden3, orden4, orden5, orden6, covid=2019, suma=0, decision;
 	int respuesta1,respuesta2,respuesta3, respuesta4;
 	int comodin, comodin1;
 	float respuesta5, respuesta6;
