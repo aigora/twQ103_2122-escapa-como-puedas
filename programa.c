@@ -100,6 +100,54 @@ int pregunta10(char respuesta10[]) {
 return orden3;						
 }
 
+int pregunta11(char respuesta11[]) {
+	
+	int orden4,i;
+	char frase2[]="Nueva Zelanda";
+	
+	orden4=strcmp(respuesta11,frase2);
+	if(orden4==0) {
+	
+	
+	} else if(orden4==1) {
+	
+	}
+	
+return orden4;						
+}
+
+int pregunta12(char respuesta12[]) {
+	
+	int orden5,i;
+	char frase2[]="Amazonas";
+	
+	orden5=strcmp(respuesta12,frase2);
+	if(orden5==0) {
+	
+	
+	} else if(orden5==1) {
+	
+	}
+	
+return orden5;						
+}
+
+int pregunta13(char respuesta13[]) {
+	
+	int orden6,i;
+	char frase2[]="Nueva Zelanda";
+	
+	orden6=strcmp(respuesta13,frase2);
+	if(orden6==0) {
+	
+	
+	} else if(orden6==1) {
+	
+	}
+	
+return orden6;						
+}
+
 void banner () {
 printf("                   ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶                     \n");
 printf("                 ¶¶¶¶¶¶             ¶¶¶¶¶¶¶                \n");
@@ -145,7 +193,7 @@ int main () {
 	int respuesta1,respuesta2,respuesta3, respuesta4;
 	int comodin, comodin1;
 	float respuesta5, respuesta6;
-	char respuesta7[30], respuesta8[30],respuesta9[50], respuesta10[50];
+	char respuesta7[30], respuesta8[30],respuesta9[50], respuesta10[50], respuesta11[50], respuesta12[50], respuesta13[50];
 	char cancion[50],cancion2[50];
 	char opcion;
 	char jug1,jug2;
@@ -155,7 +203,7 @@ int main () {
 	int edad,numero;
 	setlocale (LC_CTYPE,"spanish"); 
 	struct grupos grupo[2];
-	struct respuestas respuesta={3,4,1,7,0.82,0.000000024,"sulfito plumboso","manganato de cesio","resistire para seguir viviendo","quedate en tu casa"};
+	struct respuestas respuesta={3,4,1,7,0.82,0.000000024,"sulfito plumboso","manganato de cesio","resistire para seguir viviendo","quedate en tu casa","Nueva Zelanda","Amazonas"};
 	struct puntos punto={5,5};
 	
 	
@@ -471,18 +519,42 @@ do {
 						printf("Perfecto a continuacion os realizaremos unas preguntas sencillas\n");
 						printf("Primera pregunta\n");
 						for(i=0;i<1;i++) {
-								
-								//pregunta
-								//respuesta
-								//puntos
+							
+                        printf("¿Cuál fue el primer país en aprobar el sufragio femenino?\n");
+						fflush (stdin);
+						gets(respuesta11);
+						
+						orden4=pregunta11(respuesta11);
+						
+						if(pregunta11(respuesta11)==0) {
+							printf("Correcto\n");
+							punto.equipo1=punto.equipo1+3;
+							break;
+							
+						}else if(pregunta11(respuesta11)!=0) {
+							punto.equipo1=punto.equipo1-3;
+							printf("Incorrecta\n");
+						}
 						}
 							
 						printf("Segunda y ultima oportunidad\n");
 						for(i=0;i<1;i++) {
-								
-								//pregunta
-								//respuesta
-								//puntos
+						
+						printf("¿Cuál es el río más caudaloso del mundo?\n");
+						fflush (stdin);
+						gets(respuesta12);
+						
+						orden5=pregunta12(respuesta12);
+						
+						if(pregunta12(respuesta12)==0) {
+							printf("Correcto\n");
+							punto.equipo1=punto.equipo1+3;
+							break;
+							
+						}else if(pregunta12(respuesta12)!=0) {
+							punto.equipo1=punto.equipo1-3;
+							printf("Incorrecta\n");
+						}
 						}
 						break;
 					case '2':
@@ -507,10 +579,22 @@ do {
 						printf("Perfecto a continuacion os realizaremos unas preguntas sencillas\n");
 						printf("Primera pregunta\n");
 						for(i=0;i<1;i++) {
-								
-								//pregunta
-								//respuesta
-								//puntos
+							
+                        printf("\n");
+						fflush (stdin);
+						gets(respuesta13);
+						
+						orden6=pregunta13(respuesta13);
+						
+						if(pregunta13(respuesta13)==0) {
+							printf("Correcto\n");
+							punto.equipo2=punto.equipo2+3;
+							break;
+							
+						}else if(pregunta13(respuesta13)!=0) {
+							punto.equipo2=punto.equipo2-3;
+							printf("Incorrecta\n");
+						}
 						}
 							
 						printf("Segunda y ultima oportunidad\n");
