@@ -278,6 +278,7 @@ do {
                         printf("%c", caracter);
                         printf("\n");
                         fclose(pf);
+                        printf("Debeis escoger la respuesta que corresponde con los sintomas del Covid-19\n");
   						scanf("%d", &respuesta1);
   						
   						switch(respuesta1)
@@ -338,6 +339,7 @@ do {
                     printf("%c", caracter);
                     printf("\n");
                     fclose(pf);
+                    printf("Debeis escoger la respuesta mas adecuada al tipo de mascarilla\n");
   					scanf("%d", &respuesta3);
   						
   					switch(respuesta3)
@@ -434,7 +436,7 @@ do {
 	  						punto.equipo2=punto.equipo2-3;
 						}else if(respuesta6==respuesta.res6) {
 							printf("Correcto\n");
-						  	punto.equipo2=punto.equipo1+8;
+						  	punto.equipo2=punto.equipo2+8;
 						  	break;
 						}
 	  					
@@ -705,7 +707,7 @@ do {
     						printf("Eliga una opcion para jugar a piedra(I), papel(P), tijera(T):\n");
     						printf("El jugador 1 elige su movimiento, y luego el segundo jugador:\n");
     						scanf("%c %c",&jug1,&jug2);
-
+				
     						if (jug1=='I' && jug2=='T') {
         					printf("Piedra rompe tijeras, gana jugador 1");
     						}
@@ -737,12 +739,12 @@ do {
 					
 					switch(decision) {
 						case 1:
-							printf("Estamos muy orgullosos de vosotros. Salid y arreglad el mundo\n");
+							printf("\n\nEstamos muy orgullosos de vosotros. Salid y arreglad el mundo\n");
 							printf("Equipo perdedor. Lo sentimos por vosotros pero hasta aqui ha llegado vuestra mision.\n");
 							printf("Ha sido un placer conoceros pero conoceis las normas y para que unos salgan otros deben quedarse\n");
 							break;
 						case 2:
-							printf("No estamos conformes con vuestra decision pero para ello habeis luchado tanto, esperamos que recapaciteis a tiempo\n");
+							printf("\n\nNo estamos conformes con vuestra decision pero para ello habeis luchado tanto, esperamos que recapaciteis a tiempo\n");
 							printf("Esto causara la extincion humana\n");
 							printf("Equipo perdedor. Lo sentimos por vosotros pero hasta aqui ha llegado vuestra mision.\n");
 							printf("Ha sido un placer conoceros pero conoceis las normas y para que unos salgan otros debern quedarse\n");
