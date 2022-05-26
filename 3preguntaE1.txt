@@ -1,0 +1,11 @@
+Tened en cuenta que ahora contareis con muchas menos oportuidades que antes
+Sed inteligentes y no desperdicies estos puntos que luego os haran falta
+Nos vemos a la salida
+					 
+					
+					
+TERCERA PREGUNTA EQUIPO 1
+					
+Un circuito RLC formado por R=45 O, L=0.85 H y C=6 µF se conecta a una tension alterna eficaz de 220V y 50 Hz.
+Calcula la intensidad del circuito para poder abri la puerta y continuar a la siguiente mision.
+AYUDA: La formula necesaria se encuentra en el tema de corriente alterna.

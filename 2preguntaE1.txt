@@ -1,0 +1,12 @@
+
+
+
+
+SEGUNDA PREGUNTA. EQUIPO 1
+	 
+	 
+Varios policías vigilan un cuartel de delincuentes en el que quieren infiltrarse pero para el que necesitan una contraseña.
+Una persona llama a la puerta del local y una voz dice desde el interior 8, a lo que esa persona contesta 4. Llega otro y le dicen 14, a lo que contesta 7.
+Uno de los policías llega a la puerta del local, La voz del interior le dice 0, a lo que el responde 0.
+Sin embargo, en lugar de dejarle pasar le disparan.
+Averigue cual es la contraseña

@@ -1,0 +1,18 @@
+
+
+
+
+Bienvenidos a la sala de pruebas del laboratorio. 
+A continuacion encontrareis un par de preguntas que debereis resolver para conseguir una mayor puntuacion
+				
+				
+       PRIMERA PREGUNTA. EQUIPO 1
+					
+					
+	
+Escoja una de las siguientes opciones:
+
+        Opción 1: congestión nasal, rinorrea (aumento de mucosidad nasal), estornudos. lagrimeo y enrojecimiento de los ojos, tos seca.
+	Opcion 2: tos, dolor de garganta y destilación nasal.
+	Opcion 3: fiebre, tos, cansancio, pérdida del gusto o del olfato
+	Opcion 4: congestión o goteo nasal, dolor de garganta, tos, fiebre de bajo grado

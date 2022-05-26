@@ -1,0 +1,10 @@
+Debereis poner la solucion correcta para iluminar el sendero que os llevara a la siguiente prueba
+Mucha suerte.
+					
+					
+TERCERA PREGUNTA EQUIPO 2
+
+La separación entre dos placas metálicas cargadas es de 15 cm en el vacío.
+El campo eléctrico tiene una intensidad E=3000 N/C y un electrón de carga -1,6 10-19 C y de masa 9,1 10-31 Kg se suelta justamente sobre la superficie de la placa negativa.
+¿Cuánto tiempo tardará en alcanzar la otra placa?.
+AYUDA: La formula necesaria se encuentra en el tema de electrostatica.

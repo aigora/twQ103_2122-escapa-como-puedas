@@ -114,6 +114,7 @@ int main () {
 	char respuesta7[30], respuesta8[30];
 	char opcion;
 	FILE *pf;
+	char caracter;
 	char cad[1500];
 	int edad,numero;
 	setlocale (LC_CTYPE,"spanish"); 
@@ -190,32 +191,17 @@ do {
 				break;
 				
 			case 'B':		
-                	printf("¿Preparados? Comencemos.\n");
-                	printf("\n\n\nEl 31 de diciembre de 2019, la Organización Mundial de la Salud (OMS) recibió reportes de presencia de neumonía, de origen desconocido, en la ciudad de Wuhan, en China.\n"); 
-					printf("Rápidamente, a principios de enero, las autoridades de este país identificaron la causa como una nueva cepa de coronavirus.\n");
-					printf("El objetivo, frenar cuanto antes un brote de Covid-19, una enfermedad vírica muy contagiosa y de alta letalidad provocada por el virus del mismo nombre.\n");
-					printf("Es, a día de hoy, una de las más mortíferas que se conocen para el ser humano.\n");
-					printf("El tiempo corre en vuestra contra. Dos equipos os enfrentareis para capturar la cura y el mejor decidira que hacer con ella\n");
-					printf("\nBienvenidos a lo que podria ser el fin del mundo. Bienvenido a ESCAPA COMO PUEDAS\n");
-					
-					printf("Os encontrais dentro del laboratorio donde se origino la cura del coronavirus.Debereis resolver los distintos escenarios cada uno con distintas dificultades\n");
-					printf("Os dirigireis a la primera puerta a la derecha donde encontrareis vuestra primera prueba\n");
-					printf("Mucha suerte. Confiamos en vosotros\n");
-					
-					
-						
-					
-					printf("Bienvenidos a la sala de pruebas del laboratorio. A continuacion encontrareis un par de preguntas que debereis resolver para conseguir una mayor puntuacion\n");
-					
-					printf("\n\n\nPRIMERA PREGUNTA. EQUIPO 1\n");
-					
-					
-	
-						printf("Escoja una de las siguientes opciones:\n");
-  						printf("Opción 1: congestión nasal, rinorrea (aumento de mucosidad nasal), estornudos. lagrimeo y enrojecimiento de los ojos, tos seca.\n");
-						printf("Opcion 2: tos, dolor de garganta y destilación nasal.\n");
-						printf("Opcion 3: fiebre, tos, cansancio, pérdida del gusto o del olfato\n");
-						printf("Opcion 4: congestión o goteo nasal, dolor de garganta, tos, fiebre de bajo grado\n");
+                	pf=fopen("introduccion.txt", "r");
+                    while((caracter=fgetc(pf))!=EOF)
+                    printf("%c", caracter);
+                    printf("\n");
+                    fclose(pf);
+                    
+                    	pf=fopen("1preguntaE1.txt", "r");
+                        while((caracter=fgetc(pf))!=EOF)
+                        printf("%c", caracter);
+                        printf("\n");
+                        fclose(pf);
   						scanf("%d", &respuesta1);
   						
   						switch(respuesta1)
@@ -241,16 +227,11 @@ do {
 							
 					system("cls");
 	                    
-	                    
-	 				printf("\n\n\nSEGUNDA PREGUNTA. EQUIPO 1\n");
-	 
-	 
-	 				printf("Varios policías vigilan un cuartel de delincuentes en el que quieren infiltrarse pero para el que necesitan una contraseña.\n");
-					printf("Una persona llama a la puerta del local y una voz dice desde el interior 8, a lo que esa persona contesta 4. Llega otro y le dicen 14, a lo que contesta 7.\n");
-	 				printf("Uno de los policías llega a la puerta del local, La voz del interior le dice 0, a lo que el responde 0\n");
-	 				printf("Sin embargo, en lugar de dejarle pasar le disparan.\n");
-	 				printf("Averigue cual es la contraseña\n");
-
+	                pf=fopen("2preguntaE1.txt", "r");
+                    while((caracter=fgetc(pf))!=EOF)
+                    printf("%c", caracter);
+                    printf("\n");
+                    fclose(pf);
 
 	 				for(i=0;i<5;i++) { 
 	 				
@@ -271,16 +252,11 @@ do {
 	                
 					system("cls"); 
 					
-					
-					printf("\n\n\nPRIMERA PREGUNTA. EQUIPO 2\n");
-					
-					
-	
-					printf("Escoja la opcion adecuada sobre el uso del tipo de mascarilla:\n");
-  					printf("Opción 1: Las mascarillas higienicas no son un producto sanitario. Funcionan como un complemento de protección y seguridad.\n");
-					printf("Opcion 2: Las mascarillas quirúrgicas, evitan que cualquier persona pueda alcanzar agentes infecciosos.\n");
-					printf("Opcion 3: Las mascarillas EPI filtran el aire exalado para evitar la salida de organismos como virus.\n");
-					printf("Opcion 4: Las mascarillas higienicas están fabricadas a base de materiales textiles y pero no son reutilizables.\n");
+                    pf=fopen("1preguntaE2.txt", "r");
+                    while((caracter=fgetc(pf))!=EOF)
+                    printf("%c", caracter);
+                    printf("\n");
+                    fclose(pf);
   					scanf("%d", &respuesta3);
   						
   					switch(respuesta3)
@@ -334,17 +310,11 @@ do {
 					printf("Que os vaya bien. ¡Y que la suerte esté siempre de vuestra parte!\n");
 					
 					printf("\n\nEquipo %s os estais adentrando en la sala de control de mando, tendreis que conseguir arreglar el ordenador principal, para ver donde se encuentra la cura\n", grupo[0].nombre_equipo);
-					printf("Tened en cuenta que ahora contareis con muchas menos oportuidades que antes\n");
-					printf("Sed inteligentes y no desperdicies estos puntos que luego os haran falta\n");
-					printf("Nos vemos a la salida\n");
-					 
-					
-					
-					printf("\n\n\n TERCERA PREGUNTA EQUIPO 1");
-					
-	  				printf("Un circuito RLC formado por R=45 O, L=0.85 H y C=6 µF se conecta a una tension alterna eficaz de 220V y 50 Hz.\n");
-	  				printf("Calcula la intensidad del circuito para poder abri la puerta y continuar a la siguiente mision.\n");
-	  				printf("AYUDA: La formula necesaria se encuentra en el tema de corriente alterna.\n");
+                    pf=fopen("3preguntaE1.txt", "r");
+                    while((caracter=fgetc(pf))!=EOF)
+                    printf("%c", caracter);
+                    printf("\n");
+                    fclose(pf);
 	  				
 	  				for(i=0;i<2;i++) {
 					  
@@ -362,15 +332,11 @@ do {
 					  
 					  
 					printf("\n\nEquipo %s. Vosotros os encontrais actualmente en la sala de alta corriente\n");
-					printf("Debereis poner la solucion correcta para iluminar el sendero que os llevara a la siguiente prueba\n");
-					printf("Mucha suerte\n");
-					
-					
-					printf("\n\n\n TERCERA PREGUNTA EQUIPO 2");
-	  				printf("La separación entre dos placas metálicas cargadas es de 15 cm en el vacío.\n");
-	  				printf(" El campo eléctrico tiene una intensidad E=3000 N/C y un electrón de carga -1,6 10-19 C y de masa 9,1 10-31 Kg se suelta justamente sobre la superficie de la placa negativa.\n");
-	  				printf("¿Cuánto tiempo tardará en alcanzar la otra placa?.\n");
-	  				printf("AYUDA: La formula necesaria se encuentra en el tema de electrostatica.\n");
+                    pf=fopen("3preguntaE2.txt", "r");
+                    while((caracter=fgetc(pf))!=EOF)
+                    printf("%c", caracter);
+                    printf("\n");
+                    fclose(pf);
 	  				
 	  				for(i=0;i<2;i++) {
 	  					
