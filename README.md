@@ -17,5 +17,5 @@ Carmen Maria Merino Montero (CM2113), Moneiba Marrero Aguilar (Moneiba)
 Los objetivos de nuestro trabajo son:
  . Crear un menú de opciones que te permita registrarte, iniciar el juego, consultar las instrucciones y la posibilidad de salir del programa.
  . Que sea un juego interactivo con una historia inversiva que te permita divertite, aprender y pensar con un grupo de amigos. 
- . La posibilidad de jugar contra otro equipo permite que a parte de un juego se convierta en una competicion por la vistoria.
- . Crear un ranking de puntos de los distinto equipos que han partcipado
+ . La posibilidad de jugar contra otro equipo permite que a parte de un juego este se convierta en una competicion por la victoria.
+ . Crear un ranking de puntos de los distintos equipos que han partcipado.
