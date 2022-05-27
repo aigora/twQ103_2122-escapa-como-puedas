@@ -727,7 +727,7 @@ do {
         					printf("Tijera corta papel, gana jugador 2");
     						}
 
-    					}while(jug1==jug2);
+    					}while(jug1=='P'&&jug2=='P'||jug1=='I'&&jug2=='I'||jug1=='T'&&jug2=='T');
 						
 					}
 					
